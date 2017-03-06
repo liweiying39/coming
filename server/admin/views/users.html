@@ -1,0 +1,48 @@
+<style>
+  .role {
+    font-weight: bold;
+  }
+</style>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>role</th>
+      <th>avatar</th>
+      <th>job_title</th>
+      <th>organization</th>
+      <th>need</th>
+      <th>offer</th>
+      <th>is_sharing_showup</th>
+      <th>wechat_openid</th>
+      <th>telephone</th>
+      <th>is_deleted</th>
+      <th>action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% users.forEach(function (user) { %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td class="role"><%= user.role %></td>
+        <td style="text-align: center"><img width="50" src="<%= user.avatar %>" alt="avatar"></td>
+        <td><%= user.job_title %></td>
+        <td><%= user.organization %></td>
+        <td><%= user.need %></td>
+        <td><%= user.offer %></td>
+        <td><%= user.is_sharing_showup %></td>
+        <td><%= user.wechat_openid %></td>
+        <td><%= user.telephone %></td>
+        <td><%= Boolean(user.deleted_at) %></td>
+        <td>
+          <a href="<%= gurl('edit_user', { user_id: user.id }) %>">编辑</a>
+        </td>
+      </tr>
+    <% }); %>
+  </tbody>
+
+</table>

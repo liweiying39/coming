@@ -1,0 +1,36 @@
+{
+  "apps": [
+    {
+      "name": "coming-server",
+      "script": "./server/index.js",
+      "env": {
+        "PORT": 7001,
+        "NODE_ENV": "production"
+      },
+      "instances": "max",
+      "exec_mode": "cluster_mode",
+      "node-args": "--nouse-idle-notification --gc_global --max-old-space-size=2048 --max-new-space-size=1024"
+    },
+    {
+      "name": "coming-socket",
+      "script": "./socket/index.js",
+      "env": {
+        "PORT": 9001,
+        "NODE_ENV": "production"
+      },
+      "exec_mode": "cluster_mode",
+      "node-args": "--nouse-idle-notification --gc_global --max-old-space-size=2048 --max-new-space-size=1024"
+    },
+    {
+      "name": "coming-writer",
+      "script": "./writer/index.js",
+      "watch": [
+        "writer"
+      ],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "node-args": "--nouse-idle-notification --gc_global --max-old-space-size=2048 --max-new-space-size=1024"
+    }
+  ]
+}

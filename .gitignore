@@ -1,0 +1,12 @@
+.idea
+node_modules
+
+npm-debug.log
+database.dev.sqlite
+database.prod.sqlite
+database.test.sqlite
+playground.js
+doc.md
+
+generate/*
+!generate/.gitkeep

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link rel="stylesheet" href="./static/css/header.css">
+  <link rel="stylesheet" href="./static/css/content.css">
+  <script type='text/javascript'>
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function () {
+      _vds.push(['setAccountId', 'a44befb7128c5135']);
+      (function () {
+        var vds = document.createElement('script');
+        vds.type = 'text/javascript';
+        vds.async = true;
+        vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(vds, s);
+      })();
+    })();
+  </script>
+  <style>
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    #loading {
+      margin-top: 50%;
+      margin-left: 40%;
+      width: 80px;
+      height: 80px;
+      line-height: 100%;
+    }
+
+    .loading {
+      display: block;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+    }
+  </style>
+  <title>Dropmeet</title>
+</head>
+<body>
+<div id="loading">
+  <span>Loading...</span>
+  <!--<img class="loading" src="./static/img/loading.gif">-->
+</div>
+
+<script>
+
+  window.loadingDone = function () {
+    document.getElementById('loading').hidden = true;
+  };
+</script>
+
+<app></app>
+
+<script src="static/js/qrcode.min.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+
+</body>
+</html>
+
+

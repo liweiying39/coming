@@ -1,0 +1,41 @@
+{
+  "development": {
+    "username": "coming",
+    "password": "coming",
+    "database": "coming_dev",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "timezone": "+08:00",
+    "define": {
+      "underscored": true,
+      "underscoredAll": true,
+      "paranoid": true
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": "",
+    "database": "comming_test",
+    "host": "127.0.0.1",
+    "dialect": "sqlite",
+    "storage": "database.test.sqlite",
+    "define": {
+      "underscored": true,
+      "underscoredAll": true,
+      "paranoid": true
+    }
+  },
+  "production": {
+    "username": "coming",
+    "password": "coming",
+    "database": "coming",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "timezone": "+08:00",
+    "define": {
+      "underscored": true,
+      "underscoredAll": true,
+      "paranoid": true
+    }
+  }
+}

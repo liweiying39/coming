@@ -1,0 +1,58 @@
+<div style="max-width: 60%;">
+  <form role="form" action="<%= gurl('edit_user_handle', { user_id: user.id }) %>" method="post">
+    <div class="form-group">
+      <label for="id">id</label>
+      <input type="text" class="form-control" id="id" placeholder="id" value="<%= user.id %>" disabled>
+    </div>
+    <div class="form-group">
+      <label for="name">name</label>
+      <input type="text" name="name" class="form-control" id="name" placeholder="name" value="<%= user.name %>">
+    </div>
+    <div class="form-group">
+      <label for="role">role</label>
+      <select name="role" id="role" class="form-control">
+        <option value="client">client</option>
+        <option value="reseller">reseller</option>
+        <option value="admin">admin</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="job_title">job_title</label>
+      <input type="text" name="job_title" class="form-control" id="job_title" placeholder="job"
+             value="<%= user.job_title %>">
+    </div>
+    <div class="form-group">
+      <label for="organization">organization</label>
+      <input type="text" name="organization" class="form-control" id="organization" placeholder="organization"
+             value="<%= user.organization %>">
+    </div>
+    <div class="form-group">
+      <label for="need">offer</label>
+      <input type="text" name="need" class="form-control" id="need" placeholder="need"
+             value="<%= user.need %>">
+    </div>
+    <div class="form-group">
+      <label for="offer">offer</label>
+      <input type="text" name="offer" class="form-control" id="offer" placeholder="offer"
+             value="<%= user.offer %>">
+    </div>
+    <div class="form-group">
+      <label for="telephone">telephone</label>
+      <input type="text" name="telephone" class="form-control" id="telephone" placeholder="telephone"
+             value="<%= user.telephone %>">
+    </div>
+    <button type="submit" class="btn btn-default">保存</button>
+  </form>
+</div>
+
+<script>
+  (function() {
+    var role_select = document.getElementById('role');
+    for (var i = 0; i < role_select.options.length; i++) {
+      if (role_select.options[i].value === '<%= user.role %>') {
+        role_select.options[i].selected = true;
+        break;
+      }
+    }
+  })();
+</script>
